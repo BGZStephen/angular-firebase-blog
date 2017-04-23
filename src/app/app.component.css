@@ -1,0 +1,21 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.content-container {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  max-width: 1150px;
+  padding: 0 8px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    padding: 50px 30px;
+  }
+}

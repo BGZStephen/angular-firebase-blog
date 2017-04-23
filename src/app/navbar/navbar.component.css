@@ -1,0 +1,143 @@
+/* HEADER */
+
+.navbar-header-container {
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+              url("/assets/angular-firebase-blog/images/header-logo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.navbar-logo-container {
+  color: white;
+  padding: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.logo-header {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.logo-description {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* HEADER END */
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar-list {
+  background: white;
+  border-top: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  opacity: 0;
+  padding: 15px 10px;
+  position: absolute;
+  top: calc(100%);
+  transition: all 0.5s ease;
+  visibility: hidden;
+  width: 100%;
+}
+
+.navbar-item {
+  color: black;
+  font-weight: bold;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.navbar-item-active,
+.navbar-item:hover {
+  background: tomato;
+  color: white;
+}
+
+.navbar-toggle-container {
+  display: flex;
+  padding: 20px 10px;
+}
+
+.navbar-toggle {
+  color: tomato;
+  margin-right: 10px;
+}
+
+.navbar-toggle:last-of-type {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+
+  /* HEADER */
+
+  .navbar-header-container {
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),
+                url("/assets/angular-firebase-blog/images/header-logo.jpg");
+  }
+
+  .navbar-logo-container {
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6));
+    padding: 65px;
+    width: 45%;
+  }
+
+  .logo-header {
+    font-size: 2.4em;
+  }
+
+  .logo-description {
+    font-size: 1.4em;
+  }
+
+  /* HEADER END */
+
+  /* NAVBAR */
+
+  .navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .navbar-list {
+    border-top: none;
+    flex-direction: row;
+    padding: 0px;
+    position: relative;
+    top: calc(100%);
+    width: auto;
+  }
+
+  .navbar-item {
+    padding: 15px;
+  }
+
+  .navbar-toggle-container {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  /* HEADER */
+
+  .navbar-logo-container {
+    padding: 65px;
+    width: 30%;
+  }
+
+  /* HEADER END */
+
+}

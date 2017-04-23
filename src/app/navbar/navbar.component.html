@@ -1,3 +1,18 @@
-<p>
-  navbar works!
-</p>
+<div class="navbar-header-container">
+  <div class="navbar-logo-container">
+    <h1 class="logo-header">FireBlog</h1>
+    <p class="logo-description">Angular / Firebase Blog</p>
+  </div>
+</div>
+<div class="navbar">
+  <ul class="navbar-list" (window:resize)="menuToggle('resize')" [ngStyle]="menuToggle()">
+    <li class="navbar-item"><a class="navbar-link">Home</a></li>
+    <li class="navbar-item"><a class="navbar-link">Blog</a></li>
+    <li class="navbar-item"><a class="navbar-link">Login</a></li>
+    <li class="navbar-item"><a class="navbar-link">Admin</a></li>
+  </ul>
+  <div class="navbar-toggle-container" (click)="menuVisible = !menuVisible">
+    <p class="fa fa-bars navbar-toggle"></p>
+    <p class="navbar-toggle">MENU</p>
+  </div>
+</div>
