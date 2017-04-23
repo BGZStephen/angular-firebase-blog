@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { router } from "./app.routes"
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseService} from "./services/firebase.service"
+import { firebaseConfig } from "./api"
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,14 +17,7 @@ import { BlogEntryComponent } from './pages/blog/blog-entry.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
 
-export const firebaseConfig = {
-  apiKey: "",
-  authDomain: "angular-firebase-blog.firebaseapp.com",
-  projectId: "angular-firebase-blog",
-  databaseURL: "https://angular-firebase-blog.firebaseio.com",
-  storageBucket: "angular-firebase-blog.appspot.com",
-  messagingSenderId: "998843087151"
-};
+
 
 @NgModule({
   declarations: [

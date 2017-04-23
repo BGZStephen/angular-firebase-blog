@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseListObservable } from "angularfire2"
+import { AngularFire, FirebaseListObservable } from "angularfire2"
 import { FirebaseService } from "../../services/firebase.service"
 
 @Component({
@@ -9,13 +9,17 @@ import { FirebaseService } from "../../services/firebase.service"
 })
 export class HomeComponent implements OnInit {
 
-  blogItems: FirebaseListObservable<any>;
+  blogItems: {};
 
-  constructor(private afService: FirebaseService) {
-
+  constructor(private af: AngularFire, private afService: FirebaseService) {
   }
 
   ngOnInit() {
+    this.afService.getBlogItems()
+    .subscribe(res => {
+      this.blogItems = res
+      console.log(this.blogItems)
+    })
   }
 
 }

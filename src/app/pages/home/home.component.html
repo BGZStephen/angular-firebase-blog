@@ -1,19 +1,19 @@
 <div class="main-content-container">
   <div class="left-content-container">
     <div class="blog-items-container">
-      <div class="blog-item">
+      <div class="blog-item" *ngFor="let blogItem of blogItems | slice:0:5">
         <div class="blog-item-image-container">
-          <img class="blog-item-image" src="http://placehold.it/320x180">
+          <img class="blog-item-image" src="{{blogItem.imgUrl}}">
         </div>
         <div class="blog-item-description-container">
-          <p class="blog-item-header">test header</p>
+          <p class="blog-item-header">{{blogItem.name}}</p>
           <div class="blog-item-stats-container">
-            <p class="fa fa-pencil"> Author</p>
-            <p class="fa fa-calendar"> Date</p>
-            <p class="fa fa-comment"> Comments</p>
+            <p class="fa fa-pencil"> {{blogItem.author}}</p>
+            <p class="fa fa-calendar"> {{blogItem.date}}</p>
+            <p *ngIf="blogItem.comments" class="fa fa-comment">{{blogItem.comments.length}}</p>
           </div>
-          <p class="blog-item-description">test description</p>
-          <button class="blog-item-button">READ MORE ></button>
+          <p class="blog-item-description">{{blogItem.description}}</p>
+          <button class="blog-item-button">READ MORE></button>
         </div>
       </div>
     </div>

@@ -6,10 +6,11 @@
 </div>
 <div class="navbar">
   <ul class="navbar-list" (window:resize)="menuToggle('resize')" [ngStyle]="menuToggle()">
-    <li class="navbar-item"><a class="navbar-link">Home</a></li>
-    <li class="navbar-item"><a class="navbar-link">Blog</a></li>
-    <li class="navbar-item"><a class="navbar-link">Login</a></li>
-    <li class="navbar-item"><a class="navbar-link">Admin</a></li>
+    <li class="navbar-item" [routerLink]="['']"><a class="navbar-link">Home</a></li>
+    <li class="navbar-item" [routerLink]="['']"><a class="navbar-link">Blog</a></li>
+    <li class="navbar-item" *ngIf="!loginStatus" [routerLink]="['login']"><a class="navbar-link">Login</a></li>
+    <li class="navbar-item" *ngIf="loginStatus" (click)="logout()" (keyup)="0"><a class="navbar-link">Logout</a></li>
+    <li class="navbar-item" [routerLink]="['admin']"><a class="navbar-link">Admin</a></li>
   </ul>
   <div class="navbar-toggle-container" (click)="menuVisible = !menuVisible">
     <p class="fa fa-bars navbar-toggle"></p>

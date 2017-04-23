@@ -5,7 +5,17 @@ import "rxjs/Rx"
 @Injectable()
 export class FirebaseService {
 
-  constructor(private af: AngularFire) {
+  blogItems: FirebaseListObservable<any[]>
+
+  constructor(private af: AngularFire) {}
+
+  logout() {
+    this.af.auth.logout()
+  }
+
+  getBlogItems() {
+    this.blogItems = this.af.database.list("/articles")
+    return this.blogItems;
   }
 
 }

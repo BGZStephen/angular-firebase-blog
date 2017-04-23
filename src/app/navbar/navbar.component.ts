@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFire } from "angularfire2"
+import { FirebaseService } from "../services/firebase.service"
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +11,15 @@ export class NavbarComponent implements OnInit {
 
   menuVisible: boolean = false;
 
-  constructor() { }
+  loginStatus;
+
+  constructor(private af: AngularFire, private afService: FirebaseService) {
+    this.af.auth.subscribe(auth => this.loginStatus = auth);// user info is inside auth object
+  }
+
+  logout() {
+    this.afService.logout()
+  }
 
   menuToggle(resize?) {
     if(resize && screen.width < 768) {
