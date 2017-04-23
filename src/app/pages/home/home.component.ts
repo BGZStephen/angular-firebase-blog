@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseListObservable } from "angularfire2"
+import { FirebaseService } from "../../services/firebase.service"
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  blogItems: FirebaseListObservable<any>;
+
+  constructor(private afService: FirebaseService) {
+
+  }
 
   ngOnInit() {
   }
