@@ -1,0 +1,17 @@
+.content-container {
+  padding: 20px 0px 10px 10px;
+}
+
+.login-input {
+  font-size: 1em;
+  padding: 8px 5px;
+}
+
+.login-button {
+  background: tomato;
+  border: 2px solid tomato;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+}

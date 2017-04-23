@@ -6,6 +6,7 @@ import { router } from "./app.routes"
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseService} from "./services/firebase.service"
 import { firebaseConfig } from "./api"
+import { AuthGuard } from "./services/guards/auth.guard"
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,8 +18,6 @@ import { BlogEntryComponent } from './pages/blog/blog-entry.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,16 +28,16 @@ import { LoginComponent } from './pages/login/login.component';
     BlogCategoryComponent,
     BlogEntryComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     router,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFire, AuthProviders, AuthMethods } from "angularfire2"
+import { Router } from "@angular/router"
+import { FirebaseService } from "../../services/firebase.service"
+import { AngularFire } from "angularfire2"
 
 @Component({
   selector: 'app-login',
@@ -8,8 +10,12 @@ import { AngularFire, AuthProviders, AuthMethods } from "angularfire2"
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private af: AngularFire) {
-    this.af.auth.subscribe(auth => console.log(auth))
+  constructor(private af: AngularFire, private afService: FirebaseService, private router: Router) {
+    this.af.auth.subscribe(auth => {
+      if(auth) {
+        this.router.navigate(['/'])
+      }
+    })
   }
 
   email: string;
@@ -19,16 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(email, password) {
-      console.log(email, password)
-      this.af.auth.login({
-      email: email,
-      password: password,
-    },
-    {
-      provider: AuthProviders.Password,
-      method: AuthMethods.Password,
-    });
-
+    this.afService.login(email, password)
   }
 
 }
