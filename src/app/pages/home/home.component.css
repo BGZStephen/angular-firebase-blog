@@ -1,0 +1,139 @@
+.main-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.left-content-container {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.blog-items-container {
+
+}
+
+.blog-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.blog-item-image-container {
+  width: 100%;
+}
+
+.blog-item-image {
+  width: 100%;
+}
+
+.blog-item-description-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.blog-item-header {
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.blog-item-stats-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.blog-item-stats-container > p {
+  font-size: 0.9em;
+  margin: 10px 8px;
+}
+
+.blog-item-description {
+  display: none;
+}
+
+.blog-item-button {
+  display: none;
+}
+
+.right-content-container {
+  margin-top: 30px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+
+  .left-content-container {
+    width: 100%;
+  }
+
+  .blog-items-container {
+  }
+
+  .blog-item {
+    display: flex;
+
+    padding: 0 10px;
+  }
+
+  .blog-item-image-container {
+    width: 40%;
+  }
+
+  .blog-item-description-container {
+    flex-direction: column;
+    padding: 5px 15px;
+    width: 60%;
+  }
+
+  .blog-item-header {
+    font-weight: bold;
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .blog-item-stats-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .blog-item-stats-container > p {
+    font-size: 0.9em;
+    margin: 15px 15px 15px 0;
+  }
+
+  .blog-item-description {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .blog-item-button {
+    align-self: flex-start;
+    background: #aaa;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    margin-top: auto;
+    display: inline-block;
+    padding: 8px 15px;
+  }
+
+  .right-content-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .left-content-container {
+    width: 75%;
+  }
+
+  .right-content-container {
+    width: 25%;
+  }
+}
