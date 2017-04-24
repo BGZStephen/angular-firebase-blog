@@ -49,7 +49,12 @@
   width: 100%;
 }
 
-.navbar-item {
+.navbar-admin-list {
+  display: none;
+}
+
+.navbar-item,
+.navbar-admin-item {
   color: black;
   cursor: pointer;
   font-weight: bold;
@@ -58,8 +63,10 @@
   width: 100%;
 }
 
+
 .navbar-item-active,
-.navbar-item:hover {
+.navbar-item:hover,
+.navbar-admin-item:hover {
   background: tomato;
   color: white;
 }
@@ -127,6 +134,17 @@
 
   .navbar-toggle-container {
     display: none;
+  }
+
+  .navbar-admin-list {
+    background: white;
+    display: flex;
+    list-style: none;
+    width: auto;
+  }
+
+  .navbar-admin-item {
+    padding: 15px;
   }
 }
 
