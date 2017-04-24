@@ -46,7 +46,7 @@ export class FirebaseService {
   }
 
   updateBlogEntry(id, newValues) {
-    this.af.database.object('/item' + id).update(newValues)
+    this.af.database.object('/articles/' + id).update(newValues)
   }
 
 }

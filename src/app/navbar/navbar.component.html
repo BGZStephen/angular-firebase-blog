@@ -7,7 +7,7 @@
 <div class="navbar">
   <ul class="navbar-list" (window:resize)="menuToggle('resize')" [ngStyle]="menuToggle()">
     <li class="navbar-item" [routerLink]="['']"><a class="navbar-link">Home</a></li>
-    <li class="navbar-item" [routerLink]="['']"><a class="navbar-link">Blog</a></li>
+    <li class="navbar-item" [routerLink]="['blog']"><a class="navbar-link">Blog</a></li>
   </ul>
   <div class="navbar-toggle-container" (click)="menuVisible = !menuVisible">
     <p class="fa fa-bars navbar-toggle"></p>

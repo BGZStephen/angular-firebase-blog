@@ -1,0 +1,11 @@
+<div class="content-container">
+  <h2 class="blog-edit-header">Edit Blog Entry</h2>
+  <form class="blog-edit-form">
+    <input class="blog-edit-input" type="text" name="blog-title" placeholder="Title" value="{{blogEntry.name}}" #blogTitle>
+    <textarea class="blog-edit-textarea" name="blog-description" #blogDescription placeholder="Content" value="{{blogEntry.description}}"></textarea>
+    <input class="blog-edit-input" type="text" name="blog-imgUrl" value="{{blogEntry.imgUrl}}" #blogImgUrl placeholder="Image Url" (keyup)="0">
+    <img class="blog-edit-image" *ngIf="blogImgUrl.value" [src]="blogImgUrl.value">
+    <input class="blog-edit-input" type="text" name="blog-author" value="{{blogEntry.author}}" #blogAuthor placeholder="Author">
+    <button class="blog-edit-button" [disabled]="!blogTitle.value || !blogAuthor.value" (click)="updateBlogItem(blogEntry.$key, blogTitle.value, blogDescription.value, blogImgUrl.value, blogAuthor.value)">Save</button>
+  </form>
+</div>

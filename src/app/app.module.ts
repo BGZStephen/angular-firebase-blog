@@ -18,6 +18,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BlogAddComponent } from './pages/blog/blog-add.component';
 import { AdminEditComponent } from './pages/admin/admin-edit.component';
+import { BlogEditComponent } from './pages/blog/blog-edit.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AdminEditComponent } from './pages/admin/admin-edit.component';
     LoginComponent,
     BlogAddComponent,
     AdminEditComponent,
+    BlogEditComponent,
   ],
   imports: [
     BrowserModule,

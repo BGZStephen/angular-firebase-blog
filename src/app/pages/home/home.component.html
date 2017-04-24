@@ -12,7 +12,7 @@
             <p class="fa fa-calendar"> {{blogItem.created | date}}</p>
             <p *ngIf="blogItem.comments" class="fa fa-comment">{{blogItem.comments.length}}</p>
           </div>
-          <p class="blog-item-description">{{blogItem.description}}</p>
+          <p class="blog-item-description">{{blogItem.description | slice:0:150}}...</p>
           <button class="blog-item-button" [routerLink]="['blog/entry', blogItem.$key]">READ MORE></button>
         </div>
       </div>

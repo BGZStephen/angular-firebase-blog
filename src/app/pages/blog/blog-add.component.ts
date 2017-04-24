@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router"
 import { FirebaseService } from "../../services/firebase.service"
 
 @Component({
@@ -8,7 +9,7 @@ import { FirebaseService } from "../../services/firebase.service"
 })
 export class BlogAddComponent implements OnInit {
 
-  constructor(private afService: FirebaseService) { }
+  constructor(private afService: FirebaseService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -17,6 +18,7 @@ export class BlogAddComponent implements OnInit {
     let createdAt = new Date();
     let blogEntry = {"name": blogTitle, "description": blogDescription, "imgUrl": blogImgUrl, "author": blogAuthor, "created": createdAt}
     this.afService.addBlogItem(blogEntry)
+    this.router.navigate(['/'])
   }
 
 }

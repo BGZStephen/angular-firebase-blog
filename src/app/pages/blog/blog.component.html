@@ -1,3 +1,8 @@
-<p>
-  blog works!
-</p>
+<div class="content-container">
+  <div class="blog-items-container">
+    <div class="blog-item" *ngFor="let blogItem of blogItems">
+      <img class="blog-image" [routerLink]="['/blog/entry', blogItem.$key]" src="{{blogItem.imgUrl}}">
+      <p class="blog-header" [routerLink]="['/blog/entry', blogItem.$key]">{{blogItem.name}}</p>
+    </div>
+  </div>
+</div>
