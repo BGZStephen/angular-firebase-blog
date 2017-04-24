@@ -32,8 +32,13 @@ export class FirebaseService {
   }
 
   getBlogItems() {
-    this.blogItems = this.af.database.list("/articles")
-    return this.blogItems;
+    let blogItems = this.af.database.list("/articles")
+    return blogItems;
+  }
+
+  getBlogEntry(id) {
+    let blogItem = this.af.database.object('/articles/' + id)
+    return blogItem
   }
 
 }

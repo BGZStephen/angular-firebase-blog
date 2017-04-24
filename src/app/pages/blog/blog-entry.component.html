@@ -1,3 +1,11 @@
-<p>
-  blog-entry works!
-</p>
+<div class="content-container">
+  <div class="blog-entry-content-container">
+    <h1 class="blog-entry-header">{{blogEntry.name}}</h1>
+    <h2 class="blog-entry-author">Author: {{blogEntry.author}}</h2>
+    <p class="blog-entry-date">Created: {{blogEntry.created | date}}</p>
+    <div class="blog-entry-image-container">
+      <img class="blog-entry-image" src="{{blogEntry.imgUrl}}">
+    </div>
+    <p class="blog-entry-description">{{blogEntry.description}}</p>
+  </div>
+</div>

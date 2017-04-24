@@ -6,7 +6,7 @@
           <img class="blog-item-image" src="{{blogItem.imgUrl}}">
         </div>
         <div class="blog-item-description-container">
-          <p class="blog-item-header">{{blogItem.name}}</p>
+          <p class="blog-item-header" [routerLink]="['blog/entry', blogItem.$key]">{{blogItem.name}}</p>
           <div class="blog-item-stats-container">
             <p class="fa fa-pencil"> {{blogItem.author}}</p>
             <p class="fa fa-calendar"> {{blogItem.created | date}}</p>
