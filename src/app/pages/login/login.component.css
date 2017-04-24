@@ -12,6 +12,7 @@
   border: 2px solid tomato;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
   font-weight: bold;
   padding: 8px 15px;
 }

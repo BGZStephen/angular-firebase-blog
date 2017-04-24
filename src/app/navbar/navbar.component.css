@@ -51,6 +51,7 @@
 
 .navbar-item {
   color: black;
+  cursor: pointer;
   font-weight: bold;
   padding: 10px 0;
   transition: all 0.3s ease;

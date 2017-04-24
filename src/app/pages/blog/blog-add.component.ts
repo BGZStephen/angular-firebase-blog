@@ -15,7 +15,7 @@ export class BlogAddComponent implements OnInit {
   }
 
   addBlogItem(blogTitle, blogDescription, blogImgUrl, blogAuthor) {
-    let createdAt = new Date();
+    let createdAt = Date();
     let blogEntry = {"name": blogTitle, "description": blogDescription, "imgUrl": blogImgUrl, "author": blogAuthor, "created": createdAt}
     this.afService.addBlogItem(blogEntry)
     this.router.navigate(['/'])

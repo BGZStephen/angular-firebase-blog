@@ -25,7 +25,7 @@ export class BlogEditComponent implements OnInit {
   }
 
   updateBlogItem(key, blogTitle, blogDescription, blogImgUrl, blogAuthor) {
-    this.afService.updateBlogEntry(key, {"name": blogTitle, "description": blogDescription, "imgUrl": blogImgUrl, "Author": blogAuthor})
+    this.afService.updateBlogEntry(key, {"name": blogTitle, "description": blogDescription, "imgUrl": blogImgUrl, "author": blogAuthor})
     this.router.navigate(['/admin/edit'])
   }
 
