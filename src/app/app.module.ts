@@ -13,11 +13,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
-import { BlogCategoryComponent } from './pages/blog/blog-category.component';
 import { BlogEntryComponent } from './pages/blog/blog-entry.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BlogAddComponent } from './pages/blog/blog-add.component';
+import { AdminEditComponent } from './pages/admin/admin-edit.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +26,11 @@ import { BlogAddComponent } from './pages/blog/blog-add.component';
     FooterComponent,
     HomeComponent,
     BlogComponent,
-    BlogCategoryComponent,
     BlogEntryComponent,
     AdminComponent,
     LoginComponent,
     BlogAddComponent,
+    AdminEditComponent,
   ],
   imports: [
     BrowserModule,

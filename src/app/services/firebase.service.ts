@@ -41,4 +41,12 @@ export class FirebaseService {
     return blogItem
   }
 
+  deleteBlogEntry(id) {
+    this.af.database.object('/articles/' + id).remove()
+  }
+
+  updateBlogEntry(id, newValues) {
+    this.af.database.object('/item' + id).update(newValues)
+  }
+
 }

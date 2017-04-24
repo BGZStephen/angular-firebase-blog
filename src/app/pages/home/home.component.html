@@ -3,7 +3,7 @@
     <div class="blog-items-container">
       <div class="blog-item" *ngFor="let blogItem of blogItems | slice:0:5">
         <div class="blog-item-image-container">
-          <img class="blog-item-image" src="{{blogItem.imgUrl}}">
+          <img class="blog-item-image" [routerLink]="['blog/entry', blogItem.$key]" src="{{blogItem.imgUrl}}">
         </div>
         <div class="blog-item-description-container">
           <p class="blog-item-header" [routerLink]="['blog/entry', blogItem.$key]">{{blogItem.name}}</p>
@@ -13,7 +13,7 @@
             <p *ngIf="blogItem.comments" class="fa fa-comment">{{blogItem.comments.length}}</p>
           </div>
           <p class="blog-item-description">{{blogItem.description}}</p>
-          <button class="blog-item-button">READ MORE></button>
+          <button class="blog-item-button" [routerLink]="['blog/entry', blogItem.$key]">READ MORE></button>
         </div>
       </div>
     </div>

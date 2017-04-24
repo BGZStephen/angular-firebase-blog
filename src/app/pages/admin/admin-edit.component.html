@@ -1,0 +1,12 @@
+<div class="content-container">
+  <div class="blog-items-container">
+    <div class="blog-item" *ngFor="let blogItem of blogItems">
+      <img class="blog-image" src="{{blogItem.imgUrl}}">
+      <p class="blog-header">{{blogItem.name}}</p>
+      <div class="blog-item-buttons-container">
+        <button class="blog-item-button edit-button" [routerLink]="['/blog/edit/', blogItem.$key]">Edit</button>
+        <button class="blog-item-button delete-button" (click)="deleteBlogItem(blogItem.$key)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
