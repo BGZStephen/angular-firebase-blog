@@ -17,6 +17,7 @@ import { BlogCategoryComponent } from './pages/blog/blog-category.component';
 import { BlogEntryComponent } from './pages/blog/blog-entry.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LoginComponent } from './pages/login/login.component';
+import { BlogAddComponent } from './pages/blog/blog-add.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { LoginComponent } from './pages/login/login.component';
     BlogEntryComponent,
     AdminComponent,
     LoginComponent,
+    BlogAddComponent,
   ],
   imports: [
     BrowserModule,

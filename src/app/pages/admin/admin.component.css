@@ -1,0 +1,23 @@
+.content-container {
+  padding: 20px 0px 10px 10px;
+}
+
+.admin-header {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+}
+
+.admin-action-list {
+  list-style: none;
+}
+
+.admin-action-item {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px;
+  transition: color 0.3s ease;
+}
+
+.admin-action-item:hover {
+  color: tomato;
+}
