@@ -9,7 +9,7 @@
           <p class="blog-item-header">{{blogItem.name}}</p>
           <div class="blog-item-stats-container">
             <p class="fa fa-pencil"> {{blogItem.author}}</p>
-            <p class="fa fa-calendar"> {{blogItem.date}}</p>
+            <p class="fa fa-calendar"> {{blogItem.created | date}}</p>
             <p *ngIf="blogItem.comments" class="fa fa-comment">{{blogItem.comments.length}}</p>
           </div>
           <p class="blog-item-description">{{blogItem.description}}</p>

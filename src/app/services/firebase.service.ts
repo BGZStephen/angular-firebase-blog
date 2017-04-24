@@ -26,6 +26,11 @@ export class FirebaseService {
     this.af.auth.logout()
   }
 
+  addBlogItem(blogItemObject) {
+    const articles = this.af.database.list('/articles');
+    articles.push(blogItemObject);
+  }
+
   getBlogItems() {
     this.blogItems = this.af.database.list("/articles")
     return this.blogItems;

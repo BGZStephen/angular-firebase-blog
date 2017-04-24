@@ -3,9 +3,9 @@
   <form class="blog-add-form">
     <input class="blog-add-input" type="text" name="blog-title" placeholder="Title" #blogTitle>
     <textarea class="blog-add-textarea" name="blog-description" #blogDescription placeholder="Content"></textarea>
-    <input class="blog-add-input" type="text" name="blog-imgUrl" #blogImgUrl placeholder="Image Url" (keyup)="0">
+    <input class="blog-add-input" type="text" name="blog-imgUrl" #blogImgUrl placeholder="Image Url">
     <img class="blog-add-image" *ngIf="blogImgUrl.value" [src]="blogImgUrl.value">
     <input class="blog-add-input" type="text" name="blog-author" #blogAuthor placeholder="Author">
-    <button class="blog-add-button" [disabled]="!blogTitle.value || !blogAuthor.value" (click)="addBlogItem()">Add</button>
+    <button class="blog-add-button" [disabled]="!blogTitle.value || !blogAuthor.value" (click)="addBlogItem(blogTitle.value, blogDescription.value, blogImgUrl.value, blogAuthor.value)">Add</button>
   </form>
 </div>
